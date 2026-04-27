@@ -34,4 +34,22 @@ END
 
 SELECT COLUMNA AS ALIAS, dbo.NombreFuncion(PAR1, PAR2) FROM TABLA WHERE CONDICION;
 
+-- Trigger
+
+CREATE TRIGGER nombre_trigger  
+ON tabla  
+AFTER INSERT, UPDATE, DELETE  
+AS  
+BEGIN  
+-- lógica automática  
+END;
+
+
+-- Subconsultas
+
+SELECT nombre  
+    FROM empleados  
+    WHERE salario > (SELECT AVG(salario) FROM empleados);
+
+
 ```
