@@ -34,6 +34,28 @@ END
 
 SELECT COLUMNA AS ALIAS, dbo.NombreFuncion(PAR1, PAR2) FROM TABLA WHERE CONDICION;
 
+-- Procedimientos almacenados (SP)
+create proc sp1
+as
+select * from TB_PRODUCTO
+go
+
+exec sp1;
+--
+alter proc sp1
+as
+select * from TB_PRODUCTO where PRE_PRO >= 50
+go
+
+CREAT3 PROCEDURE NOMBRE PROCEDIMIENTO 
+@PARÁMETROS -- si hay 
+AS
+BEGIN
+-- LOGICA
+END
+
+EXC NOMBREPROCEDIMIENTO @PARAMETROS
+
 -- Trigger
 
 CREATE TRIGGER nombre_trigger  
