@@ -1,77 +1,52 @@
-```sql
+```
 
--- INNER JOIN
-SELECT * FROM Tabla_1 Alias_1 INNER JOIN Tabla_2 Alias_2 ON Alias_1.COLUMNA = Alias_2.COLUMNA;
-
--- Vistas
-CREATE VIEW Nombre_Vista
-AS
-
-SELECT FROM WHERE;
-
-SELECT * FROM Nombre_Vista;
-
--- Funciones agregadas
-
-SELECT AVG(Columna_Tabla) FROM Nombre_Tabla;
-SELECT MAX(Columna_Tabla) FROM Nombre_Tabla;
-SELECT MIN(Columna_Tabla) FROM Nombre_Tabla;
-
--- Funciones propias (Funcion escalar)
-
-CREATE FUNCTION NombreFuncion (@Par1 TIPO, @Par2 TIPO)
-RETURN TipoDeDatoDevolver
-AS
-BEGIN
-
-DECLARE @VAR1 TIPO;
-
-SELECT @VAR1 = () FROM TABLA WHERE CONDICION;
-
-RETURN @VAR1;
-
-END
-
-SELECT COLUMNA AS ALIAS, dbo.NombreFuncion(PAR1, PAR2) FROM TABLA WHERE CONDICION;
-
--- Procedimientos almacenados (SP)
-create proc sp1
-as
-select * from TB_PRODUCTO
-go
-
-exec sp1;
---
-alter proc sp1
-as
-select * from TB_PRODUCTO where PRE_PRO >= 50
-go
-
-CREAT3 PROCEDURE NOMBRE PROCEDIMIENTO 
-@PARÁMETROS -- si hay 
-AS
-BEGIN
--- LOGICA
-END
-
-EXC NOMBREPROCEDIMIENTO @PARAMETROS
-
--- Trigger
-
-CREATE TRIGGER nombre_trigger  
-ON tabla  
-AFTER INSERT, UPDATE, DELETE  
-AS  
-BEGIN  
--- lógica automática  
-END;
+- MCUN (Package)
+	- ON (Class)
+		- Diagrama de Objetivos de Negocio (Class diagram)
+	- CUN (UseCase)
+	- AN (Actor)
+	- Diagrama General de Caso de Uso de Negocio (Use Case diagram)
+	- Diagrama de ON vs CUN (Class diagram)
+- MAN
+	- TN ()
+		- Recepcionista (Class) 
+	- EN
+		- Habitación (Class)
+	- RN
+		- RN_Reserva de Hospedaje (Package)
+			- Diagrama de Clases de Negocio (Class diagram)
+			- Diagrama de Actividad de Negocio (Activity diagram)
 
 
--- Subconsultas
+## Vista Externa
 
-SELECT nombre  
-    FROM empleados  
-    WHERE salario > (SELECT AVG(salario) FROM empleados);
+# MCUN (Modelo de Casos de Uso de Negocio) 
+Representa cómo el negocio interactúa con el entorno.
 
+**ON (Objetivo de Negocio)**  
+Meta que la empresa quiere lograr en un tiempo definido.
+
+**CUN (Caso de Uso de Negocio)**  
+Proceso principal que genera valor para el cliente.
+
+**AN (Actores del Negocio)**  
+Personas u organizaciones que interactúan con el negocio.
+
+
+---
+
+## Vista Interna
+
+# MAN (Modelo de Actividades del Negocio)
+Describe cómo se realizan los procesos internamente.
+
+**TN (Trabajador de Negocio)**  
+Persona que ejecuta tareas dentro del negocio.
+
+**EN (Entidad del Negocio)**  
+Objeto o información clave que maneja el negocio.
+
+**RN (Reglas de Negocio)**  
+Normas que definen cómo debe operar el negocio.
 
 ```
