@@ -7,12 +7,12 @@
 	- AN (Actor)
 	- Diagrama General de Caso de Uso de Negocio (Use Case diagram)
 	- Diagrama de ON vs CUN (Class diagram)
-- MAN
-	- TN ()
+- MAN (Package)
+	- TN (Class)
 		- Recepcionista (Class) 
-	- EN
+	- EN (Class)
 		- Habitación (Class)
-	- RN
+	- RN ()
 		- RN_Reserva de Hospedaje (Package)
 			- Diagrama de Clases de Negocio (Class diagram)
 			- Diagrama de Actividad de Negocio (Activity diagram)
